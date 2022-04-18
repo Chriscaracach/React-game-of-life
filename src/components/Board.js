@@ -89,7 +89,7 @@ const Board = ({
     //Iteramos por cada célula
     for (let i = 0; i < totalRows; i++) {
       for (let j = 0; j < totalColumns; j++) {
-        let neighbours = 0;
+        let neighborsAlive = 0;
 
         //Iteramos por todas las posiciones que rodean a la célula
         positions.forEach((pos) => {
@@ -98,15 +98,15 @@ const Board = ({
 
           //Chequeamos si las células vecinas están vivas o muertas
           if (x >= 0 && x < totalRows && y >= 0 && y < totalColumns) {
-            neighbours += board[x][y];
+            neighborsAlive += board[x][y];
           }
         });
 
         //Revisamos cuantas células vecinas están vivas y cuántas muertas
         //De acuerdo a eso, devolvemos 0 o 1
-        if (neighbours < 2 || neighbours > 3) {
+        if (neighborsAlive < 2 || neighborsAlive > 3) {
           newBoard[i][j] = 0;
-        } else if (board[i][j] === 0 && neighbours === 3) {
+        } else if (board[i][j] === 0 && neighborsAlive === 3) {
           newBoard[i][j] = 1;
         }
       }
