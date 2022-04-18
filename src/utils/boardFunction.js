@@ -1,3 +1,8 @@
+//Éste archivo contiene las funciones que modifican al tablero
+//initializeBoard() para crear un tablero "vacío"
+//createRandomFilledBoard() para crear un tablero con células vivas y muertas de manera aleatoria
+//patterBoard() para crear un tablero con los patrones más conocidos
+
 export const initializeBoard = (rows, columns) => {
   let arrBoard = [];
   for (let x = 0; x < rows; x++) {

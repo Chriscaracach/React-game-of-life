@@ -1,3 +1,5 @@
+//Para el CSS usé un poco de arquitectura BEM, (pero sin la M, porque no la necesité)
+
 .App {
   margin: 0;
   min-width: 100vw;
@@ -9,7 +11,9 @@
   gap: 5px;
   background-color: #005555;
   color: #f8f8f8;
+  font-family: "Ubuntu", sans-serif;
 }
+
 .board {
   display: flex;
   justify-content: center;
@@ -35,6 +39,7 @@
     cursor: pointer;
   }
 }
+
 .cell {
   width: 10px;
   height: 10px;

@@ -15,6 +15,7 @@ const Controls = ({
         type="number"
         className="controls__input"
         value={totalRows}
+        //e.target.value tiene formato de string, necesitamos pasarlo a number
         onChange={(e) => setRows(Number(e.target.value))}
       />
       <label htmlFor="">Columns</label>

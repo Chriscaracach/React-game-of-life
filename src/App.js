@@ -7,11 +7,15 @@ import Generation from "./components/Generation";
 //TODO COMMENTS
 
 function App() {
-  const [totalRows, setTotalRows] = useState(40);
-  const [totalColumns, setTotalColumns] = useState(40);
+  //Estados de la app
+  //Son creados acá y enviados a los componentes necesarios
+  //Para modificarlos "levanto el estado"
+  const [totalRows, setTotalRows] = useState(30);
+  const [totalColumns, setTotalColumns] = useState(30);
   const [intervalTime, setIntervalTime] = useState(500);
   const [generation, setGeneration] = useState(1);
 
+  //Funciones que modifican los estados
   const setRows = (amount) => {
     setTotalRows(amount);
   };
@@ -28,6 +32,7 @@ function App() {
     setGeneration(1);
   };
 
+  //Chequeamos si existe información en localStorage (en éste caso, la generación)
   useEffect(() => {
     if (localStorage.getItem("generation") !== null) {
       setGeneration(localStorage.getItem("generation"));

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Patterns = ({ fillWithPattern, totalRows, totalColumns }) => {
+const Patterns = ({ fillWithPattern }) => {
   return (
     <div className="patterns">
       <p className="patterns__text">Patterns</p>
