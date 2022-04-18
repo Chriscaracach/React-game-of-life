@@ -1,0 +1,85 @@
+.App {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #005555;
+  color: #f8f8f8;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  &__controls {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  &__buttons {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a1e3d8;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+}
+.cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.alive {
+  background-color: #f7ff93;
+}
+.dead {
+  background-color: #069a8e;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  &__input {
+    width: 50px;
+    background-color: #a1e3d8;
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+.patterns {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #1bb4a8;
+  padding: 10px;
+  border-radius: 10px;
+  &__text {
+    margin: 0;
+  }
+  &__button {
+    width: 50px;
+    height: 40px;
+    background-color: #a1e3d8;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+}

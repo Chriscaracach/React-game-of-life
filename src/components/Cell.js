@@ -1,28 +1,14 @@
 import React from "react";
-import { useState } from "react";
+import { changeCellInNewBoard, classStatus } from "../utils/cellFunctions";
 
-const Cell = ({ cell, changeCellInNewBoard, getNeighbours, id }) => {
-  const [status, setStatus] = useState(cell.status);
-  const row = Number(id[0]);
-  const column = Number(id[1]);
-
-  const lifeDeath = (event) => {
-    if (event.target.classList.contains("alive")) {
-      event.target.classList.remove("alive");
-      event.target.classList.add("dead");
-      setStatus("dead");
-    } else {
-      event.target.classList.remove("dead");
-      event.target.classList.add("alive");
-      setStatus("alive");
-    }
-    changeCellInNewBoard(id[0], id[1]);
-  };
+const Cell = ({ status, id, board, setBoard }) => {
+  let row = Number(id.split("_")[0]);
+  let column = Number(id.split("_")[1]);
 
   return (
     <td
-      className={"cell " + status}
-      onClick={(event) => lifeDeath(event)}
+      className={"cell " + classStatus(status)}
+      onClick={() => changeCellInNewBoard(row, column, board, setBoard)}
       id={id}
     ></td>
   );
