@@ -33,9 +33,10 @@ function App() {
   };
 
   //Chequeamos si existe información en localStorage (en éste caso, la generación)
+  //Los datos de localStorage son Strings, por eso tenemos que transformarlos en Number
   useEffect(() => {
     if (localStorage.getItem("generation") !== null) {
-      setGeneration(localStorage.getItem("generation"));
+      setGeneration(Number(localStorage.getItem("generation")));
     }
   }, []);
 

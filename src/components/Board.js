@@ -76,7 +76,7 @@ const Board = ({
     }
   }, []);
 
-  const createNewBoard = (board) => {
+  const createNewBoard = (propBoard) => {
     //Función que se repite en bucle durante el juego
     //Primero, chequeamos el estado de la referencia
     if (!ref.current) {
@@ -84,7 +84,7 @@ const Board = ({
     }
 
     //Creamos un tablero nuevo
-    let newBoard = JSON.parse(JSON.stringify(board));
+    let newBoard = JSON.parse(JSON.stringify(propBoard));
 
     //Iteramos por cada célula
     for (let i = 0; i < totalRows; i++) {
@@ -98,7 +98,7 @@ const Board = ({
 
           //Chequeamos si las células vecinas están vivas o muertas
           if (x >= 0 && x < totalRows && y >= 0 && y < totalColumns) {
-            neighborsAlive += board[x][y];
+            neighborsAlive += propBoard[x][y];
           }
         });
 
@@ -106,7 +106,7 @@ const Board = ({
         //De acuerdo a eso, devolvemos 0 o 1
         if (neighborsAlive < 2 || neighborsAlive > 3) {
           newBoard[i][j] = 0;
-        } else if (board[i][j] === 0 && neighborsAlive === 3) {
+        } else if (propBoard[i][j] === 0 && neighborsAlive === 3) {
           newBoard[i][j] = 1;
         }
       }
@@ -114,14 +114,14 @@ const Board = ({
 
     //Creamos tablero nuevo y lo guardamos en localStorage
     setBoard(newBoard);
-    localStorage.setItem("board", JSON.stringify(Board));
+    localStorage.setItem("board", JSON.stringify(board));
     localStorage.setItem("generation", generation);
   };
 
   //Intervalo que usamos para el juego, más información en ../utils/useInterval.js
   useInterval(
     () => {
-      createNewBoard(Board);
+      createNewBoard(board);
       handleGeneration();
     },
     //Operador ternario porque sino el setInterval arranca con el primer render
