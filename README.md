@@ -16,11 +16,7 @@ Conway's Game of Life is a classic cellular automaton devised by mathematician J
 
 ## Demo
 
-Here is a quick demo of the Game of Life in action:
-
-![Game of Life Demo](insert-your-demo-gif-or-screenshot-link-here)
-
-You can also try the live demo [here](insert-link-to-live-demo).
+You can try the live demo [here]([insert-link-to-live-demo](https://gameoflife-ccaracach.vercel.app/)).
 
 ## About the Game of Life
 
@@ -38,32 +34,29 @@ This simple set of rules can give rise to complex and fascinating patterns.
 - Start, pause, and reset controls.
 - Adjustable grid size and speed.
 - Visualization of generations and cell status.
-- [Add more features here...]
 
 ## Getting Started
 
 Follow these steps to set up and run the Conway's Game of Life React app locally:
 
-1. **Clone the Repository**:
-
-   ```shell
-   git clone https://github.com/yourusername/game-of-life.git
+Clone the Repository:
+```shell
+git clone https://github.com/yourusername/game-of-life.git
+```
 Navigate to the Project Directory:
-
-shell
+```shell
 cd game-of-life
+```
+
 Install Dependencies:
-
-shell
+```shell
 npm install
+```
+
 Start the Development Server:
-
-shell
+```shell
 npm start
+```
+
 Open Your Browser:
-
 Open your web browser and go to http://localhost:3000 to see the app in action.
-
-Usage
-[Describe how to interact with and use the application here, including any specific features or controls.]
-
