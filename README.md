@@ -10,9 +10,6 @@ Conway's Game of Life is a classic cellular automaton devised by mathematician J
 - [About the Game of Life](#about-the-game-of-life)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
@@ -41,7 +38,7 @@ Follow these steps to set up and run the Conway's Game of Life React app locally
 
 Clone the Repository:
 ```shell
-git clone https://github.com/yourusername/game-of-life.git
+git clone https://github.com/Chriscaracach/React-game-of-life
 ```
 Navigate to the Project Directory:
 ```shell
