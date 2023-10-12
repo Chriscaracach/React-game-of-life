@@ -1,7 +1,5 @@
 # Conway's Game of Life - React App
 
-![Game of Life Demo](insert-your-demo-gif-or-screenshot-link-here)
-
 Conway's Game of Life is a classic cellular automaton devised by mathematician John Conway. This React application provides a graphical representation of the Game of Life, allowing you to interact with it and observe the evolution of patterns.
 
 ## Table of Contents
